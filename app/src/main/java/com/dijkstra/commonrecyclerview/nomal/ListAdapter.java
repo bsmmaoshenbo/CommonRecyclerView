@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import com.dijkstra.common.BaseRecyclerViewAdapter;
 import com.dijkstra.common.BaseRecyclerViewHolder;
+import com.dijkstra.commonrecyclerview.R;
 import com.dijkstra.commonrecyclerview.SensorInfo;
 
 /**

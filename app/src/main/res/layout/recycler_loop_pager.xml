@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.dijkstra.common.loop.CommonLoopRecyclerView
+    <com.dijkstra.common.loop.LoopRecyclerView
         android:id="@+id/recycler_view_center"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

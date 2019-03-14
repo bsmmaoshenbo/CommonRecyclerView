@@ -10,9 +10,9 @@ import android.widget.Toast;
 
 import com.dijkstra.common.BaseRecyclerViewAdapter;
 import com.dijkstra.common.RecycleViewItemDecoration;
+import com.dijkstra.common.loop.CommonLoopRecyclerView;
 import com.dijkstra.common.loop.LoopRecyclerView;
 import com.dijkstra.common.loop.OnPageListener;
-import com.dijkstra.common.loop.CommonLoopRecyclerView;
 import com.dijkstra.commonrecyclerview.R;
 import com.dijkstra.commonrecyclerview.RViewModel;
 import com.dijkstra.commonrecyclerview.SensorInfo;
