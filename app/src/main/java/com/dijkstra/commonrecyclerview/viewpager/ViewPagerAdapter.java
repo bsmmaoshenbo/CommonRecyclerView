@@ -15,14 +15,14 @@ import com.dijkstra.commonrecyclerview.SensorInfo;
  */
 public class ViewPagerAdapter extends CommonLoopAdapter<SensorInfo> {
 
-
-    public ViewPagerAdapter(int layoutId) {
-        super(layoutId);
-    }
-
     @Override
     protected boolean isLoop() {
         return true;
+    }
+
+    @Override
+    public int[] initLayouts() {
+        return new int[]{R.layout.recycler_view_pager};
     }
 
     @Override

@@ -34,7 +34,7 @@ public class AllActivity extends AppCompatActivity {
 
 //        final ListAdapter adapter = new ListAdapter(R.layout.recycler_view_vel, R.layout.recycler_view_vel_2);
 //        final GridViewAdapter gridViewAdapter = new GridViewAdapter(R.layout.recycler_view_grid);
-        final ViewPagerAdapter adapter = new ViewPagerAdapter(R.layout.recycler_view_pager);
+        final ViewPagerAdapter adapter = new ViewPagerAdapter();
 
 
         RViewModel viewModel = ViewModelProviders.of(this).get(RViewModel.class);

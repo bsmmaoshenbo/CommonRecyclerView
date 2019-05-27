@@ -34,7 +34,7 @@ public class LoopViewPagerActivity extends AppCompatActivity {
 
         final LoopRecyclerView recyclerViewCenter = findViewById(R.id.recycler_view_center);
 
-        final ViewPagerAdapter adapter = new ViewPagerAdapter(R.layout.recycler_view_pager);
+        final ViewPagerAdapter adapter = new ViewPagerAdapter();
 
         recyclerViewCenter.setListType(CommonLoopRecyclerView.LIST_TYPE_VIEW_PAGER)
                 .setAutoScrollTimeInterval(3000)

@@ -30,9 +30,11 @@ public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<Ba
     private OnItemClickListener mOnItemClickListener;//单击事件
     private OnItemLongClickListener mOnItemLongClickListener;//长按单击事件
 
-    public BaseRecyclerViewAdapter(int... layoutIds) {
-        this.mLayoutIds = layoutIds;
+    public BaseRecyclerViewAdapter() {
+        this.mLayoutIds = initLayouts();
     }
+
+    public abstract int[] initLayouts();
 
     public void setData(List<T> dataList) {
         this.mDataList = dataList;

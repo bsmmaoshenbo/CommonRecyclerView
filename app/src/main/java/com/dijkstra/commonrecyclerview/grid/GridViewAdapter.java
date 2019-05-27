@@ -15,8 +15,10 @@ import com.dijkstra.commonrecyclerview.SensorInfo;
  */
 public class GridViewAdapter extends BaseRecyclerViewAdapter<SensorInfo> {
 
-    public GridViewAdapter(int layoutId) {
-        super(layoutId);
+
+    @Override
+    public int[] initLayouts() {
+        return new int[]{R.layout.recycler_view_grid};
     }
 
     @Override

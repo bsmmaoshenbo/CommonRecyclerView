@@ -41,7 +41,7 @@ public class ListActivity extends AppCompatActivity {
                 .setOrientation(CommonRecyclerView.VERTICAL)
                 .addItemDecoration(new RecycleViewItemDecoration(RecycleViewItemDecoration.VERTICAL_LIST, dp2px(this, 5)));
 
-        final ListAdapter adapter = new ListAdapter(R.layout.recycler_view_vel, R.layout.recycler_view_vel_2);
+        final ListAdapter adapter = new ListAdapter();
         recyclerViewCenter.setAdapter(adapter);
         adapter.setOnItemClickListener(new BaseRecyclerViewAdapter.OnItemClickListener() {
             @Override

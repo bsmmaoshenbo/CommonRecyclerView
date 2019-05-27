@@ -30,7 +30,7 @@ public class GridViewActivity extends AppCompatActivity {
 
         CommonRecyclerView recyclerGridView = findViewById(R.id.recycler_grid_view);
 
-        final GridViewAdapter adapter = new GridViewAdapter(R.layout.recycler_view_grid);
+        final GridViewAdapter adapter = new GridViewAdapter();
 
         recyclerGridView
                 .noSpring()

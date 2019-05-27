@@ -16,8 +16,9 @@ import com.dijkstra.commonrecyclerview.SensorInfo;
  */
 public class ListAdapter extends BaseRecyclerViewAdapter<SensorInfo> {
 
-    public ListAdapter(int... layoutIds) {
-        super(layoutIds);
+    @Override
+    public int[] initLayouts() {
+        return new int[]{R.layout.recycler_view_vel, R.layout.recycler_view_vel_2};
     }
 
     @Override

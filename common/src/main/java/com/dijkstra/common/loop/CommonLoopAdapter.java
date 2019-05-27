@@ -13,10 +13,6 @@ import java.util.List;
  */
 public abstract class CommonLoopAdapter<T> extends BaseRecyclerViewAdapter<T> {
 
-    public CommonLoopAdapter(int... layoutId) {
-        super(layoutId);
-    }
-
     @Override
     protected int initType(List<T> dataList, int[] layoutIds, int position) {
         return initViewType(dataList.get(position % getDataItemCount()), layoutIds, position);
