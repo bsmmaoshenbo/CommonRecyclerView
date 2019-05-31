@@ -40,7 +40,7 @@ public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<Ba
         this.mDataList = dataList;
     }
 
-    public List<T> getData(){
+    public List<T> getData() {
         return mDataList;
     }
 
