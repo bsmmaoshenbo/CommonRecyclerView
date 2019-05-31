@@ -40,6 +40,10 @@ public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<Ba
         this.mDataList = dataList;
     }
 
+    public List<T> getData(){
+        return mDataList;
+    }
+
     @Override
     public int getItemViewType(int position) {
         int viewType;

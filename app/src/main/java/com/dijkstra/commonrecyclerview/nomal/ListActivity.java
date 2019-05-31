@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.dijkstra.common.BaseRecyclerViewAdapter;
-import com.dijkstra.common.RecycleViewItemDecoration;
 import com.dijkstra.common.CommonRecyclerView;
+import com.dijkstra.common.RecycleViewItemDecoration;
 import com.dijkstra.commonrecyclerview.R;
 import com.dijkstra.commonrecyclerview.RViewModel;
 import com.dijkstra.commonrecyclerview.SensorInfo;
@@ -46,7 +46,8 @@ public class ListActivity extends AppCompatActivity {
         adapter.setOnItemClickListener(new BaseRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClickListener(View v, int position) {
-
+                SensorInfo sensorInfo = adapter.getData().get(position);
+                sensorInfo.name = "小马";
             }
         });
         adapter.setOnItemLongClickListener(new BaseRecyclerViewAdapter.OnItemLongClickListener() {
