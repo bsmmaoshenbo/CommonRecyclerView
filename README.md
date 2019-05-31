@@ -25,7 +25,7 @@ Step 2. Add the dependency
 	}
 
 使用：
-1. xml：
+1. xml：直接xml引用
 
 
 	    <?xml version="1.0" encoding="utf-8"?>
@@ -43,7 +43,7 @@ Step 2. Add the dependency
                 app:layout_constraintTop_toTopOf="parent" />
 	    </android.support.constraint.ConstraintLayout>
     
-2. 代码调用：
+2. 代码调用：以垂直list为例
     
     
 	    /**
@@ -120,3 +120,49 @@ Step 2. Add the dependency
                 return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
             }
 	    }
+
+3. adapter:重写三个方法
+
+
+        /**
+         * @Description: adapter
+         * @Author: maoshenbo
+         * @Date: 2018/11/6 11:58
+         * @Version: 1.0
+         */
+        public class ListAdapter extends BaseRecyclerViewAdapter<SensorInfo> {
+        
+            @Override
+            public int[] initLayouts() {
+                return new int[]{R.layout.recycler_view_vel, R.layout.recycler_view_vel_2};
+            }
+        
+            @Override
+            protected int initViewType(SensorInfo data, int[] layoutIds, int position) {
+                int viewType;
+                if (position == 0) {
+                    viewType = layoutIds[0];
+                } else {
+                    viewType = layoutIds[1];
+                }
+                return viewType;
+            }
+        
+            @Override
+            protected void bindData(BaseRecyclerViewHolder holder, int position, SensorInfo data) {
+                int type = holder.getItemViewType();
+        
+                View view = holder.getItemView();
+                view.setEnabled(true);
+        
+                switch (type) {
+                    case R.layout.recycler_view_vel:
+                        TextView tvName = holder.getView(R.id.tv_name);
+                        tvName.setText(data.name);
+                        break;
+                    case R.layout.recycler_view_vel_2:
+        //                tvName.setText(String.format("%s我是第二个", data.name));
+                        break;
+                }
+            }
+        }
