@@ -27,6 +27,7 @@ Step 2. Add the dependency
 使用：
 1. xml：
 
+
     <?xml version="1.0" encoding="utf-8"?>
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -43,6 +44,7 @@ Step 2. Add the dependency
     </android.support.constraint.ConstraintLayout>
     
 2. 代码调用：
+    
     
     /**
      * @Description: 普通list
