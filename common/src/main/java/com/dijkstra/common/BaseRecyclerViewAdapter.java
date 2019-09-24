@@ -37,7 +37,12 @@ public abstract class BaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<Ba
     public abstract int[] initLayouts();
 
     public void setData(List<T> dataList) {
-        this.mDataList = dataList;
+        if (mDataList == null) {
+            mDataList = new ArrayList<>();
+        } else {
+            mDataList.clear();
+        }
+        mDataList.addAll(dataList);
     }
 
     public List<T> getData() {
