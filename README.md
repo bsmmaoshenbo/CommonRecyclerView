@@ -60,6 +60,11 @@ Step 2. Add the dependency
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+	
+	同时加入引用
+	
+		implementation 'com.google.android.material:material:1.0.0'
+	
 2. 代码调用：以垂直list为例
     
     
